@@ -9,8 +9,6 @@
 - Operating range: 10 to 1200 mbar, -40 to +85 °C
 - I2C and SPI interface up to 20 MHz
 
-##### Arduino Library
-
 # Content
 - Latest Release [![GitHubrelease](https://img.shields.io/badge/release-v0.1-blue.svg)](https://github.com/UravuLabs/MS5607/releases/latest/)
 - Installation
