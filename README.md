@@ -41,11 +41,15 @@ PlatformIO is an open source ecosystem for IoT development with cross platform b
 - [PlatformIO Core](http://docs.platformio.org/en/latest/core.html?utm_source=github&utm_medium=ms5607) (command line tool)
 - [Advanced usage](http://docs.platformio.org/en/latest/platforms/espressif8266.html?utm_source=github&utm_medium=ms5607) - custom settings, Over-the-Air (OTA), staging version
 - [Integration with Cloud and Standalone IDEs](http://docs.platformio.org/en/latest/ide.html?utm_source=github&utm_medium=ms5607) - Cloud9, Codeanywhere, Eclipse Che (Codenvy), Atom, CLion, Eclipse, Emacs, NetBeans, Qt Creator, Sublime Text, VIM, Visual Studio, and VSCode
-##### Using Git version (with Atom)
+##### Using Git version
 - Open **Atom Editor** -> **PlatformIO Home** -> **Libraries** -> **Registry** -> **Install**
 - Past link [***https://github.com/UravuLabs/MS5607.git***]()
 - Restart Atom Editor and library is ready import in your project
 
+##### Using PlatformIO library manager
+-  Open **Atom Editor** -> **PlatformIO Home** -> **Libraries** -> **Registry**
+-  Search for MS5607 and click on Install button
+-  Restart Atom Editor and library is ready import in your project
 
 ##### Documentation
 - [Datasheet of MS5607](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5607-02BA03%7FB2%7Fpdf%7FEnglish%7FENG_DS_MS5607-02BA03_B2.pdf%7FCAT-BLPS0035)
