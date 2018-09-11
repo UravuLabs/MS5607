@@ -48,7 +48,9 @@ PlatformIO is an open source ecosystem for IoT development with cross platform b
 -  Restart Atom Editor and library is ready import in your project
 
 # Documentation
-- [Datasheet of MS5607](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5607-02BA03%7FB2%7Fpdf%7FEnglish%7FENG_DS_MS5607-02BA03_B2.pdf%7FCAT-BLPS0035)
+-  *begin()*
+  -
+-
 
 # Contributing
 - If minor bug fixes of code and documentation, please go ahead and submit a pull request.
