@@ -2,7 +2,7 @@
 # MS5607 Library for Arduino by [**Uravu Labs**](http://www.uravulabs.com/index)
 
 
-##### About MS5607
+#### About MS5607
 - High resolution module
 - Low power, 1 μA (standby < 0.15 μA)
 - Supply voltage 1.8 to 3.6 V
@@ -48,9 +48,12 @@ PlatformIO is an open source ecosystem for IoT development with cross platform b
 -  Restart Atom Editor and library is ready import in your project
 
 # Documentation
--  *begin()*
-  -
--
+- ``` MS5607() OR MS5607(short address) ```
+  - constructor function can take device address as argument if you have connected CBS pin to Low if you have different device address
+- ``` begin() ```
+  - function reset device and read callibration data from device PROM
+- ``` setOSR(short OSR_U) ```
+  - 
 
 # Contributing
 - If minor bug fixes of code and documentation, please go ahead and submit a pull request.
