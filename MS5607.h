@@ -1,6 +1,6 @@
 /*File   : MS5607.h
   Author : Amit Ate
-  Email  : amit@uravulabs.
+  Email  : amit@uravulabs.com
   Company: Uravu Labs
 */
 
