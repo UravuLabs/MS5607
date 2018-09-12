@@ -48,12 +48,15 @@ PlatformIO is an open source ecosystem for IoT development with cross platform b
 -  Restart Atom Editor and library is ready import in your project
 
 # Documentation
-- ``` MS5607() OR MS5607(short address) ```
-   *Constructor function can take device address as argument if you have connected CBS pin to Low if you have different device address*
-- ``` begin() ```
-   *Function to reset device and read callibration data from device PROM*
-- ``` setOSR(short OSR_U) ```
-   *Function to set over sampling ratio (OSR) and select corresponding command for conversion of D1 & D2 with respective conversion delay*
+- ``` MS5607() OR MS5607(short address) : ```
+
+ *Constructor function can take device address as argument if you have connected CBS pin to Low if you have different device address*
+- ``` begin() :```
+
+  *Function to reset device and read callibration data from device PROM*
+- ``` setOSR(short OSR_U) :```
+
+  *Function to set over sampling ratio (OSR) and select corresponding command for conversion of D1 & D2 with respective conversion delay*
 
 
 # Contributing
