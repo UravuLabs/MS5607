@@ -49,11 +49,12 @@ PlatformIO is an open source ecosystem for IoT development with cross platform b
 
 # Documentation
 - ``` MS5607() OR MS5607(short address) ```
-  - constructor function can take device address as argument if you have connected CBS pin to Low if you have different device address
+  - Constructor function can take device address as argument if you have connected CBS pin to Low if you have different device address
 - ``` begin() ```
-  - function reset device and read callibration data from device PROM
+  - Function to reset device and read callibration data from device PROM
 - ``` setOSR(short OSR_U) ```
-  - 
+  - Function to set over sampling ratio (OSR) and select corresponding command for conversion of D1 & D2 with respective conversion delay
+
 
 # Contributing
 - If minor bug fixes of code and documentation, please go ahead and submit a pull request.
