@@ -75,5 +75,8 @@ PlatformIO is an open source ecosystem for IoT development with cross platform b
 
 # License and Credits
 
-Arduino IDE is developed and maintained by the Arduino team. The IDE is licensed under GPL.
-MS5607 library is developed and maintained by the [**Uravu Labs**](http://www.uravulabs.com/index) and licensed under GNU General Public License v2.0
+MS5607 library is developed and maintained by the [**Uravu Labs**](http://www.uravulabs.com/index) and licensed under GNU General Public License v2.0.
+
+Arduino IDE is developed and maintained by the Arduino team and it is licensed under GPL.
+
+PlatformIO atom IDE is licensed under Apache 2.0.
