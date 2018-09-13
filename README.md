@@ -48,15 +48,24 @@ PlatformIO is an open source ecosystem for IoT development with cross platform b
 -  Restart Atom Editor and library is ready import in your project
 
 # Documentation
-- ``` MS5607() OR MS5607(short address) : ```
+- ``` MS5607(void) OR MS5607(short address) : ```
 
-  *Constructor function can take device address as argument if you have connected CBS pin to Low if you have different device address*
-- ``` begin() :```
+  *Constructor function can take device address as argument if you have connected CBS pin to Low if you have different device address.*
+- ``` begin(void) ```
 
-  *Function to reset device and read callibration data from device PROM*
-- ``` setOSR(short OSR_U) :```
+  *Class member function to reset device and read callibration data from device PROM.*
+- ``` readDigitalValue(void) ```
 
-  *Function to set over sampling ratio (OSR) and select corresponding command for conversion of D1 & D2 with respective conversion delay*
+  *Class member function to read digital values from sensor. Before calling getTemperature() OR getPressure() needs to call this function.*
+- ``` getTemperature(void) ```
+
+  *Class member function return float value of temperature in °C.*
+- ``` getPressure() ```
+
+  *Class member function return float value of pressure in mBar.*
+- ``` setOSR(short OSR_U) ```
+
+  *Class member function to set over sampling ratio (OSR) and select corresponding command for conversion of D1 & D2 with respective conversion delay. Sensor support following OSR -> 256, 512, 1024, 2048, 4096.*
 
 
 # Contributing
