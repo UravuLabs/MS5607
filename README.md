@@ -53,7 +53,7 @@ PlatformIO is an open source ecosystem for IoT development with cross platform b
   *Constructor function can take device address as argument if you have connected CBS pin to Low if you have different device address.*
 - ``` begin(void) :```
 
-  *Class member function to reset device and read callibration data from device PROM.*
+  *Class member function which reset device and read callibration data from device PROM.*
 - ``` readDigitalValue(void) :```
 
   *Class member function to read digital values from sensor. Before calling getTemperature() OR getPressure() needs to call this function.*
