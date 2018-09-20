@@ -28,8 +28,8 @@ char MS5607::resetDevice(void){
   char error = Wire.endTransmission();
   if(error == 0){
     delay(3);     // wait for internal register reload
-    return(true);
-  }else{return(false);}
+    return(1);
+  }else{return(0);}
 }
 
 // read calibration data from PROM
@@ -42,8 +42,8 @@ char MS5607::readCalibration(){
     readUInt_16(PROM_READ+10, C5) &&
     readUInt_16(PROM_READ+12, C6)
   ){
-    return (true);
-  }else{return(false);}
+    return (1);
+  }else{return(0);}
 }
 
 // convert raw data into unsigned int
@@ -53,10 +53,10 @@ char MS5607::readUInt_16(char address, unsigned int &value){
 	if (readBytes(data,2))
 	{
 		value = (((unsigned int)data[0]*(1<<8))|(unsigned int)data[1]);
-		return(true);
+		return(1);
 	}
 	value = 0;
-	return(false);
+	return(0);
 }
 
 // read number of bytes over i2c
@@ -75,9 +75,9 @@ char MS5607::readBytes(unsigned char *values, char length){
 		{
 			values[x] = Wire.read();
 		}
-		return(true);
+		return(1);
 	}
-	return(false);
+	return(0);
 }
 
 // send command to start measurement
@@ -87,8 +87,8 @@ char MS5607::startMeasurment(void){
   char error = Wire.endTransmission();
   if(error == 0){
     delay(3);
-    return(true);
-  }else{return(false);}
+    return(1);
+  }else{return(0);}
 }
 
 // send command to start conversion of temp/pressure
@@ -98,8 +98,8 @@ char MS5607::startConversion(char CMD){
   char error = Wire.endTransmission();
   if(error == 0){
     delay(Conv_Delay);
-    return(true);
-  }else{return(false);}
+    return(1);
+  }else{return(0);}
 }
 
 // read raw digital values of temp & pressure from MS5607
@@ -108,13 +108,13 @@ char MS5607::readDigitalValue(void){
       if(startMeasurment()){
         if(getDigitalValue(DP));
       }
-    }else{return false;}
+    }else{return 0;}
     if(startConversion(CONV_D2)){
       if(startMeasurment()){
         if(getDigitalValue(DT));
       }
-    }else{return false;}
-    return true;
+    }else{return 0;}
+    return 1;
 }
 
 char MS5607::getDigitalValue(unsigned long &value){
@@ -127,7 +127,7 @@ char MS5607::getDigitalValue(unsigned long &value){
       data[x] = Wire.read();
     }
     value = (unsigned long)data[0]*1<<16|(unsigned long)data[1]*1<<8|(unsigned long)data[2];
-    return(true);
+    return(1);
   }
 
   float MS5607::getTemperature(void){
@@ -163,7 +163,7 @@ char MS5607::getDigitalValue(unsigned long &value){
         CONV_D2 = 0x52;
         Conv_Delay = 2;
         break;
-      case 1024
+      case 1024:
         CONV_D1 = 0x44;
         CONV_D2 = 0x54;
         Conv_Delay = 3;
