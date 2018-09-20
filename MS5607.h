@@ -16,7 +16,7 @@ class MS5607
     MS5607();
     MS5607(short address);
     char begin();
-    char setOSR(short OSR_U);
+    void setOSR(short OSR_U);
     float getTemperature(void);
     float getPressure(void);
     char readDigitalValue(void);
