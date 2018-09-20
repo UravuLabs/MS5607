@@ -51,21 +51,23 @@ PlatformIO is an open source ecosystem for IoT development with cross platform b
 - ``` MS5607(void) OR MS5607(short address) : ```
 
   *Constructor function can take device address as argument if you have connected CBS pin to Low if you have different device address.*
-- ``` begin(void) :```
+- ``` char begin(void) :```
 
   *Class member function which reset device and read callibration data from device PROM.*
-- ``` readDigitalValue(void) :```
+- ``` char readDigitalValue(void) :```
 
   *Class member function to read digital values from sensor. Before calling getTemperature() OR getPressure() needs to call this function.*
-- ``` getTemperature(void) :```
+- ``` float getTemperature(void) :```
 
   *Class member function return float value of temperature in °C.*
-- ``` getPressure() :```
+- ``` float getPressure() :```
 
   *Class member function return float value of pressure in mBar.*
-- ``` setOSR(short OSR_U) :```
+- ``` char setOSR(short OSR_U) :```
 
   *Class member function to set over sampling ratio (OSR) and select corresponding command for conversion of D1 & D2 with respective conversion delay. Sensor support following OSR -> 256, 512, 1024, 2048, 4096.*
+- ``` float getAltitude(void) ```
+  *Class member function return float value of height from sea level value*
 
 
 # Contributing

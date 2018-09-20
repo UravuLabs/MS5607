@@ -4,6 +4,7 @@
   Company: Uravu Labs
 */
 
+#include <math.h>
 #include <MS5607.h>
 #include <Wire.h>
 
@@ -149,7 +150,7 @@ char MS5607::getDigitalValue(unsigned long &value){
   }
 
   // set OSR and select corresponding values for conversion commands & delay
-  void setOSR(short OSR_U){
+  void MS5607::setOSR(short OSR_U){
     this->OSR = OSR_U;
     switch (OSR) {
       case 256:
@@ -183,4 +184,13 @@ char MS5607::getDigitalValue(unsigned long &value){
         Conv_Delay = 1;
         break;
     }
+  }
+
+  float MS5607::getAltitude(void){
+    float h,t,p;
+    t = getTemperature();
+    p = getPressure();
+    p = P0/p;
+    h = 153.84615*(pow(p,0.19) - 1)*(t+273.15);
+    return h;
   }
